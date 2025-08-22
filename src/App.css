@@ -1,0 +1,144 @@
+/* Background */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #4f46e5, #9333ea);
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Card box */
+.todo-box {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.error {
+  color: #ef4444;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Input + Buttons */
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-box,
+.input-edit {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-box:focus,
+.input-edit:focus {
+  outline: none;
+  border-color: #9333ea;
+  box-shadow: 0 0 5px #c084fc;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-purple {
+  background: #9333ea;
+}
+.btn-blue {
+  background: #3b82f6;
+}
+.btn-green {
+  background: #10b981;
+}
+.btn-yellow {
+  background: #f59e0b;
+}
+.btn-red {
+  background: #ef4444;
+}
+.btn-gray {
+  background: #6b7280;
+}
+
+/* Todo List */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  background: #f3f4f6;
+  margin-bottom: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+  background: #e5e7eb;
+  transform: translateX(3px);
+}
+
+/* Todo Text */
+.todo-text {
+  flex: 1;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.todo-text:hover {
+  color: #4f46e5;
+}
+
+.todo-text.completed {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
